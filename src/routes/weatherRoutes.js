@@ -1,11 +1,10 @@
-// src/routes/weatherRoutes.js
 const express = require('express');
 const router = express.Router();
 const Weather = require('../models/Weather');
 
 const { fetchAndStoreWeatherData, updateWeatherData, deleteWeatherData } = require('../controllers/weatherController');
 
-// Create
+// Create operation
 router.post('/weather', async (req, res) => {
   const { location } = req.body;
 
@@ -17,7 +16,7 @@ router.post('/weather', async (req, res) => {
   }
 });
 
-// Read
+// Read operation
 router.get('/weather/:location', async (req, res) => {
     const { location } = req.params;
   
@@ -29,7 +28,7 @@ router.get('/weather/:location', async (req, res) => {
     }
   });
 
-// Update
+// Update operation
 router.put('/weather/:location', async (req, res) => {
   const { location } = req.params;
   const updatedData = req.body;
@@ -42,7 +41,7 @@ router.put('/weather/:location', async (req, res) => {
   }
 });
 
-// Delete
+// Delete operation
 router.delete('/weather/:location', async (req, res) => {
   const { location } = req.params;
 

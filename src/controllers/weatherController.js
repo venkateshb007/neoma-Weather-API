@@ -1,4 +1,3 @@
-// src/controllers/weatherController.js
 const axios = require('axios');
 const Weather = require('../models/Weather');
 const { getFormattedDate } = require('../utils/apiUtils');
@@ -37,13 +36,13 @@ const updateWeatherData = async (location, updatedData) => {
       throw new Error('Weather data not found.');
     }
 
-    // Update the fields based on your requirements
+    // Updating the fields as per the requirments
     existingWeatherData.temperature = updatedData.temperature || existingWeatherData.temperature;
     existingWeatherData.humidity = updatedData.humidity || existingWeatherData.humidity;
     existingWeatherData.weatherDescription = updatedData.weatherDescription || existingWeatherData.weatherDescription;
     existingWeatherData.windSpeed = updatedData.windSpeed || existingWeatherData.windSpeed;
 
-    // Update other necessary fields based on the API response
+   
 
     await existingWeatherData.save();
     return existingWeatherData;
