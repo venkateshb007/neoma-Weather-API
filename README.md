@@ -50,7 +50,8 @@ API Endpoints
   }
 
 * GET /api/weather/:location: Retrieve weather data for a specific location.
-  http://localhost:3000/api/weather/New York
+  curl http://localhost:3000/api/weather/New%20York
+
 
 * PUT /api/weather/:location: Update weather data for a specific location.
   Request body example:
@@ -66,7 +67,7 @@ API Endpoints
   }
   
 * DELETE /api/weather/:location: Delete weather data for a specific location.
-  DELETE http://localhost:3000/api/weather/New York
+  curl -X DELETE http://localhost:3000/api/weather/New%20York
 
 
 * Contributing
