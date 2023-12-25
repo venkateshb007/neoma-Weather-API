@@ -18,7 +18,7 @@ Make sure you have the following installed on your machine:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/venkateshb007neoma-Weather-API.git
+   git clone [(https://github.com/venkateshb007/neoma-Weather-API)]
 2. Navigate to the project directory: cd WeatherAppAPI
 3. Install dependencies: npm install
 4. Start the server: node src/app.js
